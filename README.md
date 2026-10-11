@@ -1,11 +1,11 @@
 <div align="center">
 
-<img src="./hero.svg" width="100%" alt="Yasin Sheikh-Abdi Cyber Banner" />
+<img src="./hero.svg" width="100%" alt="Yasin Sheykh-Abdi Cyber Banner" />
 
 <br/>
 
 <a href="https://git.io/typing-svg">
-  <img width="100%" src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=20&duration=2800&pause=1000&color=00F2FE&center=true&vCenter=true&multiline=false&repeat=true&width=700&height=55&lines=%3E+Hello+World!+I'm+Yasin+Sheikh-Abdi+%F0%9F%91%8B;%3E+Computer+Engineering+Student+%40+SRTTU;%3E+Passionate+about+C%2B%2B%2C+Python+%26+Tech;%3E+English+Teacher+%7C+Konkoor+Mentor+%7C+Binary+Squad" alt="Typing SVG" />
+  <img width="100%" src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=20&duration=2800&pause=1000&color=00F2FE&center=true&vCenter=true&multiline=false&repeat=true&width=700&height=55&lines=%3E+Hello+World!+I'm+Yasin+Sheykh-Abdi+%F0%9F%91%8B;%3E+Computer+Engineering+Student+%40+SRTTU;%3E+Passionate+about+C%2B%2B%2C+Python+%26+Tech;%3E+English+Teacher+%7C+Konkoor+Mentor+%7C+Binary+Squad" alt="Typing SVG" />
 </a>
 
 <br/><br/>
@@ -29,9 +29,9 @@
 #include <vector>
 #include <string>
 
-class YasinSheikhAbdi {
+class YasinSheykhAbdi {
 public:
-    std::string name          = "Yasin Sheikh-Abdi";
+    std::string name          = "Yasin Sheykh-Abdi";
     std::string major         = "Computer Engineering @ SRTTU";
     std::string codingJourney = "Beginner & Enthusiast in C++ and Python";
     std::string mentorship    = "English Instructor & Konkoor Advisor";
