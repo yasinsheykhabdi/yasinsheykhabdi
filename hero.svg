@@ -1,0 +1,184 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 320" width="100%" height="320">
+  <defs>
+    <!-- پس‌زمینه سرمه‌ای و مشکی عمیق -->
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#050811"/>
+      <stop offset="50%" stop-color="#0a1124"/>
+      <stop offset="100%" stop-color="#050811"/>
+    </linearGradient>
+
+    <!-- گرادینت آبی نئونی (Cyber Blue) -->
+    <linearGradient id="cyber-blue" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00f2fe"/>
+      <stop offset="50%" stop-color="#0ea5e9"/>
+      <stop offset="100%" stop-color="#3b82f6"/>
+    </linearGradient>
+
+    <!-- فیلتر درخشش نئون -->
+    <filter id="neon-glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3.5" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+
+    <!-- شبکه (Grid) مهندسی پس‌زمینه -->
+    <pattern id="grid" width="25" height="25" patternUnits="userSpaceOnUse">
+      <path d="M 25 0 L 0 0 0 25" fill="none" stroke="#0f1b33" stroke-width="0.8"/>
+      <circle cx="25" cy="25" r="0.8" fill="#1e3a8a"/>
+    </pattern>
+  </defs>
+
+  <style>
+    .title { font: 800 28px 'Fira Code', 'Consolas', monospace; fill: #f0f9ff; letter-spacing: 1px; }
+    .subtitle { font: 600 15px 'Fira Code', 'Consolas', monospace; fill: #00f2fe; }
+    .term-text { font: 500 13.5px 'Fira Code', 'Consolas', monospace; fill: #cbd5e1; }
+    .hl-blue { fill: #38bdf8; font-weight: bold; }
+    .hl-cyan { fill: #00f2fe; font-weight: bold; }
+    .hl-green { fill: #34d399; }
+    .binary { font: 400 11px monospace; fill: #1e3a8a; letter-spacing: 2px; }
+
+    /* چشمک‌زن مکان‌نما */
+    .cursor { animation: blink 1s step-end infinite; }
+    @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
+
+    /* جریان الکتریسیته در مدارها */
+    .circuit-line {
+      stroke-dasharray: 15 160;
+      animation: flow 3s linear infinite;
+    }
+    .circuit-line-rev {
+      stroke-dasharray: 10 190;
+      animation: flow 4s linear infinite reverse;
+    }
+    @keyframes flow {
+      from { stroke-dashoffset: 200; }
+      to { stroke-dashoffset: 0; }
+    }
+
+    /* تایپ مرحله‌ای خطوط */
+    .l1 { opacity: 0; animation: fadeIn 0.4s forwards 0.3s; }
+    .l2 { opacity: 0; animation: fadeIn 0.4s forwards 0.9s; }
+    .l3 { opacity: 0; animation: fadeIn 0.4s forwards 1.5s; }
+    .l4 { opacity: 0; animation: fadeIn 0.4s forwards 2.1s; }
+    .l5 { opacity: 0; animation: fadeIn 0.4s forwards 2.7s; }
+    @keyframes fadeIn { to { opacity: 1; } }
+
+    /* انیمیشن حرکت توپ فوتبال و دوچرخه */
+    .ball-move {
+      animation: bounce-roll 2.2s ease-in-out infinite alternate;
+    }
+    @keyframes bounce-roll {
+      0% { transform: translate(0px, 0px) rotate(0deg); }
+      50% { transform: translate(22px, -4px) rotate(180deg); }
+      100% { transform: translate(45px, 0px) rotate(360deg); }
+    }
+
+    .bike-move {
+      animation: ride 2.8s linear infinite;
+    }
+    @keyframes ride {
+      0% { transform: translateX(48px); opacity: 0; }
+      15% { opacity: 1; }
+      85% { opacity: 1; }
+      100% { transform: translateX(0px); opacity: 0; }
+    }
+  </style>
+
+  <!-- کادر اصلی و گرید -->
+  <rect width="880" height="320" rx="14" fill="url(#bg)"/>
+  <rect width="880" height="320" rx="14" fill="url(#grid)"/>
+  <rect x="2" y="2" width="876" height="316" rx="12" fill="none" stroke="url(#cyber-blue)" stroke-width="2" filter="url(#neon-glow)" stroke-opacity="0.7"/>
+
+  <!-- کدهای باینری پس‌زمینه سمت راست -->
+  <text x="650" y="35" class="binary">01000010 01001001 01001110</text>
+  <text x="670" y="295" class="binary">01010011 01010010 01010100</text>
+
+  <!-- مدارهای الکترونیکی سمت راست -->
+  <g stroke="#0f2942" stroke-width="2" fill="none">
+    <path d="M 620 65 L 690 65 L 720 95 L 850 95"/>
+    <path d="M 620 250 L 700 250 L 730 220 L 850 220"/>
+    <path d="M 660 160 L 860 160"/>
+  </g>
+  <g stroke="url(#cyber-blue)" stroke-width="2.5" fill="none" filter="url(#neon-glow)">
+    <path class="circuit-line" d="M 620 65 L 690 65 L 720 95 L 850 95"/>
+    <path class="circuit-line-rev" d="M 620 250 L 700 250 L 730 220 L 850 220"/>
+    <path class="circuit-line" d="M 660 160 L 860 160"/>
+  </g>
+  <circle cx="620" cy="65" r="4" fill="#00f2fe" filter="url(#neon-glow)"/>
+  <circle cx="620" cy="250" r="4" fill="#0ea5e9" filter="url(#neon-glow)"/>
+
+  <!-- پنجره ترمینال سمت چپ -->
+  <rect x="22" y="18" width="600" height="284" rx="10" fill="#070c18" fill-opacity="0.9" stroke="#1e3a8a" stroke-width="1.5"/>
+  <path d="M 22 28 Q 22 18 32 18 L 612 18 Q 622 18 622 28 L 622 46 L 22 46 Z" fill="#0f172a"/>
+  <circle cx="42" cy="32" r="5.5" fill="#ef4444"/>
+  <circle cx="60" cy="32" r="5.5" fill="#f59e0b"/>
+  <circle cx="78" cy="32" r="5.5" fill="#10b981"/>
+  <text x="235" y="36" font-family="monospace" font-size="12" fill="#38bdf8">yasin@srttu-ce: ~/profile</text>
+
+  <!-- هدر نام و دانشگاه -->
+  <text x="42" y="80" class="title" filter="url(#neon-glow)">YASIN SHEIKH-ABDI</text>
+  <text x="42" y="104" class="subtitle">&lt;Computer Engineering Student @ SRTTU /&gt;</text>
+  <line x1="42" y1="116" x2="590" y2="116" stroke="#1e3a8a" stroke-width="1" stroke-dasharray="4 4"/>
+
+  <!-- خطوط اطلاعات داخل ترمینال -->
+  <g class="term-text">
+    <text x="42" y="140" class="l1">
+      <tspan class="hl-cyan">➜</tspan> <tspan class="hl-blue">~</tspan> $ ./load_profile --verbose
+    </text>
+
+    <text x="42" y="166" class="l2">
+      <tspan class="hl-cyan">├──</tspan> 💻 <tspan class="hl-blue">Programming:</tspan> C++ &amp; Python <tspan fill="#64748b">(Passionate Learner)</tspan>
+    </text>
+
+    <text x="42" y="192" class="l3">
+      <tspan class="hl-cyan">├──</tspan> 🎓 <tspan class="hl-blue">Mentorship:</tspan>  English Teacher &amp; Konkoor Advisor
+    </text>
+
+    <text x="42" y="218" class="l4">
+      <tspan class="hl-cyan">├──</tspan> 🌐 <tspan class="hl-blue">Ventures:</tspan>    ResearcherWeb.ir | Binary Squad
+    </text>
+
+    <!-- بخش علایق به همراه ایموجی‌های متحرک توپ و دوچرخه -->
+    <g class="l5">
+      <text x="42" y="246">
+        <tspan class="hl-cyan">└──</tspan> ⚡ <tspan class="hl-blue">Interests:</tspan>   Football
+      </text>
+      <!-- مسیر و انیمیشن توپ فوتبال -->
+      <line x1="285" y1="250" x2="345" y2="250" stroke="#00f2fe" stroke-width="1" stroke-dasharray="2 3" opacity="0.6"/>
+      <g transform="translate(285, 245)">
+        <g class="ball-move">
+          <text x="-7" y="5" font-size="14">⚽</text>
+        </g>
+      </g>
+
+      <text x="360" y="246">|  Cycling</text>
+      <!-- مسیر و انیمیشن دوچرخه -->
+      <line x1="450" y1="250" x2="515" y2="250" stroke="#00f2fe" stroke-width="1" stroke-dasharray="3 3" opacity="0.6"/>
+      <g transform="translate(450, 245)">
+        <g class="bike-move">
+          <text x="0" y="4" font-size="15">🚴‍♂️</text>
+        </g>
+      </g>
+    </g>
+
+    <!-- خط آخر ترمینال -->
+    <text x="42" y="280" class="l5">
+      <tspan class="hl-green">root@yasin:~#</tspan> echo "Ready to build &amp; explore!" <tspan class="cursor" fill="#00f2fe">█</tspan>
+    </text>
+  </g>
+
+  <!-- هسته پردازنده نئونی چرخان سمت راست -->
+  <g transform="translate(745, 160)">
+    <!-- حلقه بیرونی چرخان -->
+    <circle cx="0" cy="0" r="58" fill="none" stroke="#1e3a8a" stroke-width="2"/>
+    <circle cx="0" cy="0" r="58" fill="none" stroke="#00f2fe" stroke-width="3" stroke-dasharray="25 40" filter="url(#neon-glow)">
+      <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="10s" repeatCount="indefinite"/>
+    </circle>
+    <!-- شش‌ضلعی میانی معکوس‌چرخان -->
+    <polygon points="0,-42 36,-21 36,21 0,42 -36,21 -36,-21" fill="#070c18" stroke="#38bdf8" stroke-width="2">
+      <animateTransform attributeName="transform" type="rotate" from="360" to="0" dur="14s" repeatCount="indefinite"/>
+    </polygon>
+    <!-- تراشه مرکزی -->
+    <rect x="-18" y="-18" width="36" height="36" rx="4" fill="#0a192f" stroke="#00f2fe" stroke-width="1.5" filter="url(#neon-glow)"/>
+    <text x="-12" y="5" font-family="monospace" font-weight="bold" font-size="14" fill="#00f2fe">&lt;/&gt;</text>
+  </g>
+</svg>
