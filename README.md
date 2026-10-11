@@ -5,7 +5,7 @@
 <br/>
 
 <a href="https://git.io/typing-svg">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=21&duration=3200&pause=1000&color=00F2FE&center=true&vCenter=true&multiline=true&repeat=true&width=780&height=75&lines=%3E+Hello+World!+I'm+Yasin+Sheikh-Abdi+%F0%9F%91%8B;%3E+Computer+Engineering+Student+%40+SRTTU;%3E+Passionate+about+C%2B%2B%2C+Python+%26+Tech;%3E+English+Teacher+%7C+Konkoor+Mentor+%7C+Binary+Squad" alt="Typing SVG" />
+  <img width="100%" src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=19&duration=3200&pause=1000&color=00F2FE&center=true&vCenter=true&multiline=true&repeat=true&width=650&height=70&lines=%3E+Hello+World!+I'm+Yasin+Sheikh-Abdi+%F0%9F%91%8B;%3E+Computer+Engineering+Student+%40+SRTTU;%3E+Passionate+about+C%2B%2B%2C+Python+%26+Tech;%3E+English+Teacher+%7C+Konkoor+Mentor+%7C+Binary+Squad" alt="Typing SVG" />
 </a>
 
 <br/>
